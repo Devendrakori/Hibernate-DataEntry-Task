@@ -59,7 +59,7 @@ public class Person {
 	}
 	@Override
 	public String toString() {
-		return "Person [adhar=" + adhar + ", name=" + name + "]";
+		return "Person [adhar=" + adhar + ", name=" + name + ", voter=" + voter.getVoterid() + ", add=" + add.getCity() + "]";
 	}
 		
 	

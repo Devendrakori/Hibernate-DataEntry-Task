@@ -2,7 +2,6 @@ package com.client;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 import com.controller.Controller;
 
 public class Client {
@@ -41,5 +40,6 @@ public class Client {
 
 	public static void main(String[] args) {
 		menu();
+
 	}
 }
