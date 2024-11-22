@@ -19,8 +19,27 @@ This project demonstrates how to use **Hibernate ORM** for managing entities and
 - Maven for dependency management
 
 ## Project Structure
-![Capture](https://github.com/user-attachments/assets/1d9ec1e0-30dd-49b4-8890-af37b5e77a6a)
-
+```bash
+hibernate-dataentry-task/
+│
+├── src/                           
+│   └── main/                       
+│       └── java/                   
+│           └── com/                
+│               └── java/           
+│                   ├── client/        
+│                   ├── controller/    
+│                   ├── dao/           
+│                   ├── entity/       
+│                   ├── service/       
+│                   └── utility/       
+├── src/main/resources/                     
+│                └── hibernate.cfg.xml       
+├── src/test/java/com/java/                                                  
+├── src//test/java/com/resources/                           
+├── target/                         
+└── pom.xml        
+```
 ### Key Packages and Classes
 
 - **`entity/`**: Contains the entity classes representing the database tables.

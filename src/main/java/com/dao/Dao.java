@@ -16,7 +16,7 @@ public class Dao {
 
 	public void insertData(int adhar, String name, String v_id, String cons, int id, int pincode, String area,
 			String city, String state) {
-		Session session = Utility.openSession();
+		Session session = Utility.buildSessionFactory("hibernate.cfg.xml").openSession();
 		Transaction tx = null;
 		try {
 			tx = session.beginTransaction();
@@ -43,13 +43,16 @@ public class Dao {
 			session.close();
 		}
 	}
-
 	@SuppressWarnings("unchecked")
 	public List<Person> getAll() {
-		Session session = Utility.openSession();
+		Session session = Utility.buildSessionFactory("hibernate.cfg.xml").openSession();
 		Transaction tx = session.beginTransaction();
 		List<Person> list = session.createQuery("from Person").list();
 		tx.commit();
 		return list;
+	}
+	
+	public void updateInfo() {
+		
 	}
 }

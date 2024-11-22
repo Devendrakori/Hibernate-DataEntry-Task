@@ -3,6 +3,7 @@ package com.client;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import com.controller.Controller;
+import com.entity.Person;
 
 public class Client {
 
@@ -12,7 +13,7 @@ public class Client {
 	public static void menu() {
 		while (true) {
 			try {
-				System.out.println("1) Show Person\n2) Add Person\n3) Exit");
+				System.out.println("1) Show Person\n2) Add Person\n3) Preson From Address \n4) Exit");
 				System.out.print("Enter choice : ");
 				int n = sc.nextInt();
 				sc.nextLine();
@@ -26,6 +27,11 @@ public class Client {
 					sc.nextLine();
 					break;
 				case 3:
+					for (Person p : c.getPresonFromAddress()) {
+						System.out.println(p);
+					}
+					break;
+				case 4:
 					System.out.print("Thank You");
 					System.exit(0);
 				}
