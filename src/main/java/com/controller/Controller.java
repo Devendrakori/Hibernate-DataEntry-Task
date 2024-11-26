@@ -21,4 +21,7 @@ public class Controller {
 	public void insertData(int n) {
 		new Service().insertData(n);
 	}
+	public void updateinfo() {
+		new Service().updateinfo();
+	}
 }

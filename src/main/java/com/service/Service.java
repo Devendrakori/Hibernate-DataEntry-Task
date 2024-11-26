@@ -92,4 +92,22 @@ public class Service {
 		}
 		
 	}
+	public void updateinfo() {
+		try {
+			System.out.print("Enter adhar : ");
+			int adhar = sc.nextInt();
+			sc.nextLine();
+			System.out.print("Enter new name : ");
+			String name = sc.nextLine();
+			System.out.print("Enter new city name : ");
+			String city = sc.nextLine();
+			System.out.print("Enter new constituency name : ");
+			String cons = sc.nextLine();
+			new Dao().updateInfo(adhar, name, city, cons);
+		}catch(InputMismatchException e) {
+			System.out.println("Enter valid input !");
+			sc.nextLine();
+			this.updateinfo();
+		}
+	}
 }

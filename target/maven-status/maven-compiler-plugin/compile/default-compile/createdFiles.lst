@@ -1,0 +1,8 @@
+com\client\Client.class
+com\utility\Utility.class
+com\controller\Controller.class
+com\dao\Dao.class
+com\entity\Address.class
+com\entity\Person.class
+com\entity\VoterCard.class
+com\service\Service.class

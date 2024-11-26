@@ -52,7 +52,14 @@ public class Dao {
 		return list;
 	}
 	
-	public void updateInfo() {
-		
+	public void updateInfo(int adhar,String name,String city,String cons) {
+		Session session = Utility.buildSessionFactory("hibernate.cfg.xml").openSession();	
+		Transaction tx = session.beginTransaction();
+		Person p = session.get(Person.class, adhar);
+		p.setName(name);
+		p.getAdd().setCity(city);
+		p.getVoter().setConstituency(cons);
+		session.saveOrUpdate(p);
+		tx.commit();
 	}
 }

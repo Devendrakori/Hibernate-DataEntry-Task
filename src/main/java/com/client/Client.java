@@ -2,6 +2,7 @@ package com.client;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 import com.controller.Controller;
 import com.entity.Person;
 
@@ -13,7 +14,7 @@ public class Client {
 	public static void menu() {
 		while (true) {
 			try {
-				System.out.println("1) Show Person\n2) Add Person\n3) Preson From Address \n4) Exit");
+				System.out.println("1) Show Person\n2) Add Person\n3) Preson From Address \n4) Update info \n5) Exit");
 				System.out.print("Enter choice : ");
 				int n = sc.nextInt();
 				sc.nextLine();
@@ -32,6 +33,9 @@ public class Client {
 					}
 					break;
 				case 4:
+					c.updateinfo();
+					break;
+				case 5:
 					System.out.print("Thank You");
 					System.exit(0);
 				}
@@ -46,6 +50,8 @@ public class Client {
 
 	public static void main(String[] args) {
 		menu();
+//		Controller c = new Controller();
+//		c.updateinfo(1232, "Devendra", "jbp", "vijay");
 
 	}
 }
