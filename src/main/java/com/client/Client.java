@@ -50,8 +50,5 @@ public class Client {
 
 	public static void main(String[] args) {
 		menu();
-//		Controller c = new Controller();
-//		c.updateinfo(1232, "Devendra", "jbp", "vijay");
-
 	}
 }
