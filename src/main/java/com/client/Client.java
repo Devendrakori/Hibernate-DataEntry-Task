@@ -38,6 +38,7 @@ public class Client {
 				case 5:
 					System.out.print("Thank You");
 					System.exit(0);
+						
 				}
 			} catch (InputMismatchException e) {
 				System.out.print("Enter valid data !");
